@@ -37,6 +37,7 @@ form button{
     color: #fff;
     display: flex;
     transition: opacity .3s linear;
+    align-items: center;
 }
 
 .task svg{
@@ -49,6 +50,9 @@ form button{
     opacity: 0.3;    
 }
 
+.task-name {
+    flex-grow: 1;
+}
 .task span {
     position: relative;
 }
@@ -68,6 +72,22 @@ form button{
     width: 100%;    
 }
 
+.checkbox{
+    display: flex;
+    align-items: center;
+}
+
 h1,h2{
     text-align: center;
+}
+
+button.trash{
+    background: none;
+    border: none;
+    display: flex;  
+    cursor: pointer;    
+}
+
+button.trash svg{
+    height: 18px;
 }
