@@ -36,6 +36,7 @@ form button{
     margin-top: 5px;
     color: #fff;
     display: flex;
+    transition: opacity .3s linear;
 }
 
 .task svg{
@@ -43,3 +44,27 @@ form button{
     margin-left: 5px;
     fill: #61dafb;
 }
+
+.task.done{
+    opacity: 0.3;    
+}
+
+.task span {
+    position: relative;
+}
+
+.task span::before{
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: #ddd;
+    position: absolute;
+    top: 10px;
+    transition: width .2s linear;
+}
+
+.task.done span::before{
+    width: 100%;    
+}
+
