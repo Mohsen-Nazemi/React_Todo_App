@@ -3,7 +3,7 @@
 }
 
 main{
-    max-width: 300px;
+    max-width: 400px;
     margin: 20px auto;
 }
 
@@ -68,3 +68,6 @@ form button{
     width: 100%;    
 }
 
+h1,h2{
+    text-align: center;
+}

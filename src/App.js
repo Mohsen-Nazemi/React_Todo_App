@@ -31,9 +31,25 @@ function App() {
     })
   }
 
+  const numberComplete = tasks.filter(t => t.done).length;
+  const numberTotal = tasks.length;
+
+
+  function getMessage(){
+    const percentage = numberComplete/numberTotal * 100;
+    if(percentage === 0){
+      return 'سعی کن حداقل یکیشو انجام بدی:) 🙏'
+    }
+    if(percentage === 100){
+      return 'درود. تمامی کار ها انجام شد. 😉🤙'
+    }
+    return 'آفرین با قدرت ادامه بده💪'
+  }
 
   return (
    <main>
+    <h1>{numberComplete}/{numberTotal} complete</h1>
+    <h2>{getMessage()}</h2>    
     <TaskForm onAdd={addTask} />
     {tasks.map((task, index)=>(
       <Task {...task} 
