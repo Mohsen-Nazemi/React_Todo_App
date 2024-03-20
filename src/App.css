@@ -1,3 +1,8 @@
+body{
+    background-color: #17181f;
+    color: #ddd;
+}
+
 *{
     box-sizing: border-box;
 }
@@ -15,6 +20,8 @@ form{
 }
 
 form input[type="text"]{
+    background: none;
+    color:#fff;
     border: 0;
     padding: 0px 8px;
     width: 100%;
@@ -50,7 +57,7 @@ form button{
     opacity: 0.3;    
 }
 
-.task-name {
+.task-name, div.task form {
     flex-grow: 1;
 }
 .task span {
@@ -90,4 +97,10 @@ button.trash{
 
 button.trash svg{
     height: 18px;
+}
+
+.task input{
+    border: 2px solid #555;
+    border-radius:5px;
+    padding: 2px 4px;
 }
